@@ -2,7 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "server.js",
+  "homepage": "https://Yatrasaathi.github.io/YATRASAATHI",
   "scripts": {
+    "deploy":"gh-pages -d build",
+    "predeploy":"npm run build",
     "start": "node backend/server.js",
     "dev": "nodemon backend/server.js"
   },
