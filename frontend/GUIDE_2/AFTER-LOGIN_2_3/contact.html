@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help</title>
+    <link rel="stylesheet" href="cstyle.css" />
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="YS LOGO.png" alt="Yatra Saathi Logo" class="logo">
+            <h1 class="brand-name">Yatra Saathi</h1>
+        </div>
+        <div class="nav-links">
+            <a href="after_login.html">Home</a>
+            <a href="dashboard1.html">Dashboard</a>
+            <a href="profile.html">My Profile</a>
+            <a href="contact.html" class="active">Help</a>
+        </div>
+
+        <!-- Results Container -->
+        <div id="root"></div>
+    </nav>
+
+    <!-- Main Section -->
+    <main class="help-section">
+        <div class="contact">
+            <h2>Contact Us !</h2>
+            <div class="contact-box">
+                <p><img src="location.png" alt="Location icon"> <span>Bhubaneswar</span></p>
+                <p><img src="contact.png" alt="Phone icon"> <span>+919126703984</span></p>
+                <p><img src="email.png" alt="Email icon"> <span>yatrasaathi2425@gmail.com</span></p>
+              </div>
+        </div>
+
+        <div class="faq">
+            <h2>FAQs</h2>
+            <div class="faq-item">
+                <button class="accordion">How can I join as a guide on Yatra Saathi?</button>
+                <div class="panel">
+                    <p>To become a guide on Yatra Saathi, you need to register on our platform and complete your guide profile with accurate details.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="accordion">How will I receive tour requests?</button>
+                <div class="panel">
+                    <p>Tour requests will be sent directly to your Yatra Saathi dashboard and also notified via email.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="accordion">What are my earnings as a guide?</button>
+                <div class="panel">
+                    <p>Your earnings will depend on the number of tours you conduct and the rates you set for each tour.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="accordion">How do I get paid?</button>
+                <div class="panel">
+                    <p>Yatra Saathi processes payments securely to your linked bank account or preferred payment method.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="accordion">Can I cancel tour requests on Yatra Saathi?</button>
+                <div class="panel">
+                    <p>Yes, guides can cancel tour on their own convenience you can email us at the provided adress we will get back to you soon.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const accordions = document.querySelectorAll(".accordion");
+        accordions.forEach(acc => {
+            acc.addEventListener("click", function () {
+                this.classList.toggle("active");
+                let panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

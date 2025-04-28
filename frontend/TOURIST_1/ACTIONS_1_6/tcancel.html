@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tcancel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #FFFFFF;
+            color: #284B8C;
+            text-align: left;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #d5ecff;
+            padding: 10px 100px;
+        }
+
+        /* Logo and Title */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 100px;
+            /* Adjust as per your logo */
+            height: 100px;
+        }
+
+        .brand-name {
+            font-size: 32px;
+            color: #284B8C;
+            font-weight: bold;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #284B8C;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .nav-links .active {
+            border-bottom: 2px solid #284B8C;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .search-container input {
+            border: none;
+            padding: 10px;
+            outline: none;
+            width: 180px;
+            height: 45px;
+            font-size: 14px;
+        }
+
+        .search-container button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 15px;
+            cursor: pointer;
+        }
+
+        .term {
+            width: 1600px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #284B8C;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .term h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #284B8C;
+        }
+
+        .term ul {
+            margin-left: 20px;
+            list-style-type: disc;
+            font-size: 18px;
+        }
+
+        .term li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="YS LOGO.png" alt="Yatra Saathi Logo" class="logo">
+            <h1 class="brand-name">Yatra Saathi</h1>
+        </div>
+        <div class="nav-links">
+            <a href="http://localhost:7000/TOURIST_1/SEARCH_1_3/after_login.html">Home</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIVITY_PANEL_1_5/activity1.html">Activity Panel</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/profile.html">My Account</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/contact.html">Help</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Enter your destination">
+            <button id="searchBtn" onclick="searchPlaces()">Search</button>
+        </div>
+
+        <!-- Results Container -->
+        <div id="root"></div>
+    </nav>
+    <div class="term">
+    <h3>Cancellation Policy for Tourists</h3>
+    <ul>
+        <li>
+            We're sorry you have to cancel your booking with Yatrasaathi.Instead of cancelling, consider rescheduling for a more convenient date. However, if cancellation is unavoidable, please review our cancellation policy to understand the applicable fees and procedures.
+        </li>
+        <li>
+            When cancelling within 24 hours of making the booking and the tour is not happening within the next 7days, you will get a full refund(including 10% service fee).
+        </li>
+        When cancelling within 24 hours and less than 7days before the booking, you receive refund minus the service fee.
+        <li>
+            If the booking is cancelled by guide, the tourist will receive a 100% refund.
+        </li>
+        <li>
+            If you are reducing the no.of members in a booking please note that cancellation policy willnot apply henceforth no refund wil be provided.
+        </li>
+        <li>
+            If the booking was made for same day means if the starting time is within 24hr no refunds apply.
+        </li>
+        <li>
+            All bookings on request need to be confirmed by the guide within 6hr or else another guide will be provided to you. Further if you cancel an unconfirmed booking within 6hr, you'II recieve a full refund.
+        </li>
+        <li>
+            If a tourist doesnot show up at the scheduled time, no refunds will be issued.
+        </li>
+        <li>
+            Tourists can reschedule only once and the request must be atleast 24hr before tour, subject to guide availability. Rescheduling options are not provided beyond this.
+        </li>
+    </ul>
+    </div>
+</body>
+
+</html>

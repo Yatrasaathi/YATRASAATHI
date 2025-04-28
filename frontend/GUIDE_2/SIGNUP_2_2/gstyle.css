@@ -1,0 +1,194 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+body {
+  background-image: url('https://img.freepik.com/free-vector/flat-design-travel-background_23-2149193475.jpg?t=st=1744463518~exp=1744467118~hmac=bb1147a2f18166f8bd9de89282cda6d4923830429cd54e0a0c16ae5caf7a7c83&w=1800');
+  background-size: cover; /* Ensures the image covers the entire page */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+/* Container styling */
+.container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    color: #284b8c;
+}
+
+h2 {
+  color: #0077cc;
+  text-align: center;
+}
+
+/* Form fields */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-inline {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact-inline select,
+.contact-inline input {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-inline select {
+  width: 80px;
+}
+
+.contact-inline input {
+  flex: 1;
+  /* allows it to grow */
+}
+
+
+/* Label Styling */
+.form-group label {
+  color: #284B8C;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Input & Select Text Color */
+.form-group input,
+.form-group select,
+.contact-inline input,
+.contact-inline select {
+  color: #284B8C;
+  border: 1px solid #284B8C;
+}
+
+/* Optional: Also change placeholder color */
+::placeholder {
+  color: #284B8C;
+  opacity: 0.7;
+}
+
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.gender-options {
+  display: flex;
+  gap: 20px;
+  margin-top: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+/* Gender styling */
+.gender-options {
+  display: flex;
+  gap: 20px;
+  margin-top: 5px;
+}
+
+.gender-options label {
+  font-weight: normal;
+}
+
+/* Contact field inline styling */
+.form-group select {
+  width: 25%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.form-group input#contact {
+  width: 70%;
+  display: inline-block;
+}
+
+/* Terms & checkbox */
+.terms {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.terms input {
+  margin-right: 8px;
+}
+
+.terms a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+/* Submit button */
+.submit-btn {
+  margin-top: 20px;
+  width: 40%;
+  padding: 12px;
+  background-color: #00b8e6;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit-btn:hover {
+  background-color: #0099cc;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUMMARY</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="YS LOGO.png" alt="Yatra Saathi Logo" class="logo">
+            <h1 class="brand-name">Yatra Saathi</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Activity Panel</a>
+            <a href="/frontend/TOURIST_1/ACTIONS_1_6/profile.html">My Account</a>
+            <a href="/frontend/TOURIST_1/ACTIONS_1_6/contact.html">Help</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Enter your destination">
+            <button id="searchBtn" onclick="searchPlaces()">Search</button>
+        </div>
+
+        <!-- Results Container -->
+        <div id="root"></div>
+    </nav>
+    <div class="parent-container">
+        <div id="trip-summary" class="summary-container"></div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            const params = new URLSearchParams(window.location.search);
+            const allParams = Object.fromEntries(params.entries());
+            console.log("Trip Params:", allParams);
+
+            const city = allParams.city;
+            const members = parseInt(allParams.members) || 0;
+            const tripdate = allParams.tripdate;
+            const guide = allParams.guide;
+            const guideCharges = parseFloat(allParams.guideCharges) || 0;
+            const starttime = allParams.starttime;
+            const duration = allParams.duration;
+
+            if (!city) {
+                document.getElementById('trip-summary').innerHTML = "<p>No trip details found. Please book a trip first.</p>";
+                return;
+            }
+
+            const cityPrices = {
+                bhubaneswar: 3840,
+                cuttack: 2450,
+                puri: 5000
+            };
+
+            const perPerson = cityPrices[city.toLowerCase()] || 0;
+            const totalPackagePrice = perPerson * members;
+            const totalCost = totalPackagePrice + guideCharges + 50; // Including platform fee
+
+            let imageHTML = "";
+            if (city.toLowerCase() === "bhubaneswar") {
+                imageHTML = `<img src="bbsr.png" alt="bhubaneswar Image" width="400" height="300">
+                <p><strong>Guide:</strong> ${guide}</p>`;
+            }
+            if (city.toLowerCase() === "cuttack") {
+                imageHTML = `<img src="ctc.png" alt="cuttack Image" width="400" padding-left="10px">
+                <p><strong>Guide:</strong> ${guide}</p>`;
+            }
+            if (city.toLowerCase() === "puri") {
+                imageHTML = `<img src="puri.png" alt="Puri Image" width="400" height="300">
+                <p><strong>Guide:</strong> ${guide}</p>`;
+            }
+
+            document.getElementById('trip-summary').innerHTML = `
+            <div class="trip-summary">
+            <h2>Trip Summary</h2>
+            ${imageHTML}
+            <hr>
+            <div class="trip-details">
+            <!-- Left Side Content -->
+            <div class="left-side">
+      <p><strong>City:</strong> ${city}</p>
+      <p><strong>Members:</strong> ${members}</p>
+      <p><strong>Trip Date:</strong> ${tripdate}</p>
+      <p><strong>Start Time:</strong> ${starttime}</p>
+      <p><strong>Duration:</strong> ${duration}</p>
+    </div>
+    <!-- Right Side Content -->
+    <div class="right-side">
+      <p><strong>Package:</strong> ₹${perPerson}</p>
+      <p><strong>Total Package:</strong> ₹${totalPackagePrice}</p>
+      <p><strong>Guide Charges:</strong> ₹${guideCharges}</p>
+      <p><strong>Platform Fee:</strong> ₹50</p>
+      <p><strong>Total Cost:</strong> ₹${totalCost}</p>
+    </div>
+  </div>
+  <hr>
+<a href="../BOOK_NOW_1_4/payment.html">
+  <button class="pay-button">Pay ₹${totalCost}</button>
+</a>
+
+</div>
+    `;
+        };
+
+    </script>
+
+
+</body>
+
+</html>

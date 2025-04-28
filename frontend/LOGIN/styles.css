@@ -1,0 +1,232 @@
+/* Full Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E6F4FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+/* Login Box */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.login-box {
+    width: 1030px;
+    height: 720px;
+    background: #f7f7f7;
+    border: 1px solid #999;
+    display: flex;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Left Side: Login Form */
+.login-form {
+    width: 50%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form h2 {
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 16px; /* Reduces the gap between the heading and the login box */
+}
+
+.log{
+    margin-left: 70px;
+}
+/* User Type Dropdown: Aligns "Login As" text with the dropdown */
+.user-type-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between text and dropdown */
+    margin-bottom: 15px; /* Adjust spacing from other elements */
+}
+.user-type-container label{
+    color: #284B8C;
+    font-size: 16px;
+}
+/* Style for Dropdown */
+.user-type-container select {
+    width: 150px;  /* Adjust width */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #E6F4FF;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #E6F4FF; /* Sets background color */
+    color: #284B8C; /* Ensures text is readable */
+}
+
+/* Optional: Change dropdown arrow color for better visibility */
+.user-type-container select:focus {
+    outline: none;
+    border-color: #284B8C;
+}
+
+
+h2 {
+    color: #284B8C;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #284B8C;
+}
+
+input {
+    width: 354px;  /* Set width */
+    height: 40px;  /* Set height */
+    padding: 8px;  /* Adjust padding for better text alignment */
+    margin: 5px 0;
+    border: 1px solid #ccc;  /* Keeps border subtle */
+    border-radius: 4px;  /* Makes it slightly rounded, but still rectangular */
+    box-sizing: border-box; /* Ensures padding doesn't increase size */
+}
+input[type="email"] {
+    background: url('email-icon.png') no-repeat right 10px center;
+    background-size: 20px;
+}
+
+input[type="password"] {
+    background: url('lock-icon.png') no-repeat right 10px center;
+    background-size: 20px;
+}
+/* Input Container for Icons */
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 354px;
+    margin-bottom: 8px; /* Adds space between input fields */
+}
+
+/* Input Fields */
+.input-container input {
+    width: 100%;
+    height: 36px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Keeps it rectangular */
+    padding-right: 40px; /* Space for icon */
+}
+
+/* Input Field Icons */
+.input-container i {
+    position: absolute;
+    right: 10px;
+    color: #7994CF;
+}
+input::placeholder {
+    color: #7994CF;  /* Sets the placeholder text color */
+}
+
+/* Forgot Password Styling */
+.forgot-password {
+    display: block;
+    text-align: right;  /* Aligns to the right */
+    font-size: 14px;
+    color: #0094BE;
+    text-decoration: none;
+    margin: 10px 5px 20px; /* Adjusted margins for spacing */
+    width: 354px; /* Matches the input box width */
+}
+
+
+/* Forgot Password Hover Effect */
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Oval-Shaped Login Button */
+.login-btn {
+    width: 303px;
+    height: 44px;
+    padding: 10px 41px;
+    background-color: #0094BE;
+    color: #FFFFFF;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px; /* Makes it oval */
+    cursor: pointer;
+    text-align: center;
+    margin-left: 15px; /* Moves button slightly to the left */
+    display: block;
+}
+
+
+.signup-text {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.signup-text a {
+    color: #284B8C;
+    text-decoration: none;
+}
+
+/* Style for the text "Don't have an account? Sign up" */
+.account-text {
+    color: #284B8C;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.divider {
+    color: #284B8C;
+    font-size: 16px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+/* Social Media Login */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-login img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Right Side: Image */
+.login-image {
+    width: 463px;
+    height: 534.66px;
+    display: flex;
+    align-items: center; /* Centers the image vertically */
+    justify-content: center; /* Centers the image horizontally */
+    overflow: hidden; /* Prevents overflow issues */
+    padding-top: 40px; /* Adds space on top */
+}
+
+.login-image img {
+    width: 90%; /* Adjust width as needed */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* Ensures the full image is visible */
+    border-radius: 0px 10px 10px 0; /* Rounded corners */
+}
+

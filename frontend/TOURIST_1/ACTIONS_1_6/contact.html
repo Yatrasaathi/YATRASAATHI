@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help - YatraSaathi</title>
+    <link rel="stylesheet" href="cstyle.css" />
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="YS LOGO.png" alt="Yatra Saathi Logo" class="logo">
+            <h1 class="brand-name">Yatra Saathi</h1>
+        </div>
+        <div class="nav-links">
+            <a href="http://localhost:7000/TOURIST_1/SEARCH_1_3/after_login.html">Home</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIVITY_PANEL_1_5/activity1.html">Activity Panel</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/profile.html">My Account</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/contact.html" class="active">Help</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Enter your destination">
+            <button id="searchBtn" onclick="searchPlaces()">Search</button>
+        </div>
+
+        <!-- Results Container -->
+        <div id="root"></div>
+    </nav>
+
+    <!-- Main Section -->
+    <main class="help-section">
+        <div class="contact">
+            <h2>Contact Us !</h2>
+            <div class="contact-box">
+                <p><img src="location.png" alt="Location icon"> <span>Bhubaneswar</span></p>
+                <p><img src="contact.png" alt="Phone icon"> <span>+919126703984</span></p>
+                <p><img src="email.png" alt="Email icon"> <span>yatrasaathi2425@gmail.com</span></p>
+              </div>
+        </div>
+
+        <div class="faq">
+            <h2>FAQs</h2>
+            <div class="faq-item">
+                <button class="accordion">What services does Yatra Saathi offer to tourists?</button>
+                <div class="panel">
+                    <p>Yatra Saathi offers guided tours, personalized experiences, and local insights to make your trip memorable.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="accordion">How do I book a tour on Yatra Saathi?</button>
+                <div class="panel">
+                    <p>You can browse available tours, select your preferred guide, and complete your booking directly through our website.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="accordion">Is it safe to travel with Yatra Saathi guides?</button>
+                <div class="panel">
+                    <p>Yes, all our guides are verified and trained to provide safe and enjoyable experiences for tourists.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="accordion">Can I customize my tour with Yatra Saathi?</button>
+                <div class="panel">
+                    <p>Absolutely! You can discuss your interests with the guide and customize your tour accordingly.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="accordion">How do I make payments for the tours?</button>
+                <div class="panel">
+                    <p>Payments are securely processed through our platform using multiple payment options including credit/debit cards and UPI.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="accordion">What if I can't find any city on the list?</button>
+                <div class="panel">
+                    <p>Please reach out to us, we're expanding rapidly...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const accordions = document.querySelectorAll(".accordion");
+        accordions.forEach(acc => {
+            acc.addEventListener("click", function () {
+                this.classList.toggle("active");
+                let panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #E6F4FF;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #d5ecff;
+            padding: 10px 100px;
+        }
+
+        /* Logo and Title */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 100px;
+            /* Adjust as per your logo */
+            height: 100px;
+        }
+
+        .brand-name {
+            font-size: 32px;
+            color: #284B8C;
+            font-weight: bold;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #284B8C;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .nav-links .active {
+            border-bottom: 2px solid #284B8C;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .search-container input {
+            border: none;
+            padding: 10px;
+            outline: none;
+            width: 180px;
+            height: 45px;
+            font-size: 14px;
+        }
+
+        .search-container button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 15px;
+            cursor: pointer;
+        }
+
+
+        /* Parent container to hold both elements */
+        .parent-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        /* Pay container */
+        .payment-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: #79BBDE;
+            width: 500px;
+            height: 480px;
+        }
+
+        .payment-box {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 550px;
+            height: 100%;
+            color: #284B8C;
+        }
+
+        .qr-code {
+            width: 200px;
+            /* Adjust size as needed */
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .pay-now {
+            background-color: #44D1C5;
+            /* Teal color */
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .pay-now:hover {
+            background-color: #3BA4DF;
+            /* Slightly darker teal for hover effect */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="YS LOGO.png" alt="Yatra Saathi Logo" class="logo">
+            <h1 class="brand-name">Yatra Saathi</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Activity Panel</a>
+            <a href="#">My Account</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Enter your destination">
+            <button id="searchBtn" onclick="searchPlaces()">Search</button>
+        </div>
+
+        <!-- Results Container -->
+        <div id="root"></div>
+    </nav>
+    <div class="parent-container">
+
+        <div class="payment-container">
+            <div class="payment-box">
+                <h2>Payment</h2>
+                <p><strong>Yatra Saathi</strong></p>
+                <p>A/c No.: 98******66</p>
+                <p>IFSC Code: SBIN0001567</p>
+
+                <img src="Rectangle 6667449.png" alt="QR Code" class="qr-code">
+                <p>Scan to Pay</p>
+
+                <button class="pay-now" onclick="window.location.href='completed.html'">Pay Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - Guide</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body><nav class="navbar">
+  <div class="logo-container">
+      <img src="YS LOGO.png" alt="Yatra Saathi Logo" class="logo">
+      <h1 class="brand-name">Yatra Saathi</h1>
+  </div>
+  <button class="logout-btn" onclick="window.location.href='http://localhost:7000/LOGIN/login.html'">Log out</button>
+</nav>
+
+  <section class="overview">
+    <div class="overview-card" id="teal">
+      <p>Tourists</p>
+      <h3>523</h3>
+    </div>
+    <div class="overview-card" id="green">
+      <p>Guides</p>
+      <h3>409</h3>
+    </div>
+    <div class="overview-card" id="pink">
+      <p>Completed Tours</p>
+      <h3>257</h3>
+    </div>
+    <div class="overview-card" id="yellow">
+      <p>Earnings</p>
+      <h3>2,05,900</h3>
+    </div>
+  </section>
+  <div class="dashboard-container">
+    <div class="status-tabs">
+      <div class="tab active-tab" data-tab="guide">Guide</div>
+      <div class="tab" data-tab="tourist">Tourist</div>
+      <div class="tab" data-tab="booking">Booking</div>
+      <div class="tab" data-tab="packages">Packages</div>
+    </div>
+  </div>
+  <div class="tables-container">
+    <!-- Guide Table -->
+    <div class="table-wrapper" id="guide">
+      <h3>Guide</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Sl. No</th>
+            <th>Guide Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Contact No.</th>
+            <th>Aadhar ID</th>
+            <th>UPI ID</th>
+            <th>City</th>
+            <th>Language</th>
+            <th>Rating</th>
+            <th>Charges</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Rita Sahoo</td>
+            <td>33</td>
+            <td>Female</td>
+            <td>1234567890</td>
+            <td>123456789012</td>
+            <td>ritasahoo33@gmail.com</td>
+            <td>Cuttack</td>
+            <td>English, Odia</td>
+            <td>4.3</td>
+            <td>₹1000/day</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Raghu Das</td>
+            <td>45</td>
+            <td>Male</td>
+            <td>1234567890</td>
+            <td>123456789012</td>
+            <td>raghudas45@gmail.com</td>
+            <td>Bhubaneswar</td>
+            <td>Odia, Bengali</td>
+            <td>4.5</td>
+            <td>₹1000/day</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Manoranjan Majhi</td>
+            <td>37</td>
+            <td>Male</td>
+            <td>1234567890</td>
+            <td>123456789012</td>
+            <td>manoranjanmajhi37@gmail.com</td>
+            <td>Puri</td>
+            <td>English, Hindi</td>
+            <td>5.0</td>
+            <td>₹1000/day</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Aarav Pradhan</td>
+            <td>28</td>
+            <td>Male</td>
+            <td>1234567890</td>
+            <td>123456789012</td>
+            <td>aaravpradhan28@gmail.com</td>
+            <td>Cuttack</td>
+            <td>English, Bengali</td>
+            <td>4.9</td>
+            <td>₹1000/day</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Sarat Manik</td>
+            <td>50</td>
+            <td>Male</td>
+            <td>1234567890</td>
+            <td>123456789012</td>
+            <td>saratmanik50@gmail.com</td>
+            <td>Bhubaneswar</td>
+            <td>English, Urdu</td>
+            <td>3.9</td>
+            <td>₹1000/day</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Radhika Senapati</td>
+            <td>34</td>
+            <td>Female</td>
+            <td>1234567890</td>
+            <td>123456789012</td>
+            <td>radhikasenapati34@gmail.com</td>
+            <td>Puri</td>
+            <td>English, Tamil</td>
+            <td>5.0</td>
+            <td>₹1000/day</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Tourist Table -->
+    <div class="table-wrapper" id="tourist" style="display: none;">
+      <h3>Tourist</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Sl. No</th>
+            <th>Tourist Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Contact</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Govt ID/Passport</th>
+            <th>UPI ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Rajesh Kumar</td>
+            <td>35</td>
+            <td>Male</td>
+            <td>9876543210</td>
+            <td>Delhi, India</td>
+            <td>rajesh@example.com</td>
+            <td>ID12345678</td>
+            <td>rajesh@ybl</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Anita Desai</td>
+            <td>29</td>
+            <td>Female</td>
+            <td>9867452301</td>
+            <td>Mumbai, India</td>
+            <td>anita@example.com</td>
+            <td>PAS4532145</td>
+            <td>anita@upi</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>John Mathew</td>
+            <td>42</td>
+            <td>Male</td>
+            <td>9945123789</td>
+            <td>Bangalore, India</td>
+            <td>john@example.com</td>
+            <td>ID78654321</td>
+            <td>john@paytm</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Priya Sharma</td>
+            <td>31</td>
+            <td>Female</td>
+            <td>9801123456</td>
+            <td>Jaipur, India</td>
+            <td>priya@example.com</td>
+            <td>ID87654322</td>
+            <td>priya@ybl</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Samuel Dsouza</td>
+            <td>38</td>
+            <td>Male</td>
+            <td>9789012345</td>
+            <td>New York</td>
+            <td>samuel@example.com</td>
+            <td>ID23455678</td>
+            <td>sam@upi</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Booking Table -->
+    <div class="table-wrapper" id="booking" style="display: none;">
+      <h3>Booking</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Sl. No</th>
+            <th>Tourist Name</th>
+            <th>Arrival Date</th>
+            <th>Start Time</th>
+            <th>City</th>
+            <th>Guide Allocated</th>
+            <th>Total Charges</th>
+            <th>Members</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Rajesh Kumar</td>
+            <td>2025-05-12</td>
+            <td>09:00 AM</td>
+            <td>Cutack</td>
+            <td>Rita Sahoo</td>
+            <td>₹2500</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Anita Desai</td>
+            <td>2025-06-01</td>
+            <td>10:30 AM</td>
+            <td>Bhubaneswar</td>
+            <td>Raghu Das</td>
+            <td>₹3200</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>John Mathew</td>
+            <td>2025-04-28</td>
+            <td>08:00 AM</td>
+            <td>Puri</td>
+            <td>Manoranjan Majhi</td>
+            <td>₹4100</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Priya Sharma</td>
+            <td>2025-07-15</td>
+            <td>11:00 AM</td>
+            <td>Cuttack</td>
+            <td>Aarav Pradhan</td>
+            <td>₹2900</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Samuel Dsouza</td>
+            <td>2025-08-20</td>
+            <td>07:00 AM</td>
+            <td>Bhubaneswar</td>
+            <td>Sarat Manik</td>
+            <td>₹3500</td>
+            <td>5</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Package Table -->
+    <div class="table-wrapper" id="packages" style="display: none;">
+      <h3>Package</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Sl. No</th>
+            <th>Package Name</th>
+            <th>Duration</th>
+            <th>Package Price</th>
+            <th>Package Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Puri</td>
+            <td>8hr</td>
+            <td>₹5000</td>
+            <td>Visit Jagannath Temple, Golden Beach, Konark Temple and Wonder World Water Park.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Bhubaneswar</td>
+            <td>6hr 30min</td>
+            <td>₹3840</td>
+            <td>Explore Lingaraj Temple, Dhauli Shanti Stupa , Odisha State Museum and Nandankanan Zoological Park.
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Cuttack</td>
+            <td>4hr 30min</td>
+            <td>₹2450</td>
+            <td>Visit Cuttack Chandi Temple, Maritime Museum, Dhabaleswar Temple and Peacock Valley.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabs = document.querySelectorAll('.status-tabs .tab');
+      const tables = document.querySelectorAll('.tables-container .table-wrapper');
+  
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+          // Remove 'active-tab' class from all tabs
+          tabs.forEach(t => t.classList.remove('active-tab'));
+          // Add 'active-tab' class to the clicked tab
+          this.classList.add('active-tab');
+  
+          // Hide all tables
+          tables.forEach(table => table.style.display = 'none');
+          // Show the corresponding table
+          const targetId = this.getAttribute('data-tab');
+          const targetTable = document.getElementById(targetId);
+          if (targetTable) {
+            targetTable.style.display = 'block';
+          }
+        });
+      });
+    });
+  </script>
+  
+</body>
+
+</html>

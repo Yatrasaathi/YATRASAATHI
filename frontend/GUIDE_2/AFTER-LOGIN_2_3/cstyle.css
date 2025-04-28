@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    text-align: center;
+    color: #284b8c;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #D3ECFF;
+  padding: 10px 100px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 132px;
+  background: #D3ECFF;
+}
+
+/* Logo and Title */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  /* Adjust as per your logo */
+  height: 100px;
+}
+
+.brand-name {
+  font-size: 32px;
+  color: #284B8C;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #284B8C;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid #3dc9a7;
+  padding-bottom: 3px;
+}
+
+
+  /* Help Section */
+  .help-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 40px;
+  }
+  
+  .contact {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .contact h2 {
+    color: #1a3d6d;
+    margin-bottom: 10px;
+  }
+  
+  .contact-box {
+    background-color: #d1f1fa;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.8;
+    padding-left: 40px;
+    width: 450px;
+    height: 150px;
+  }
+  .contact-box p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #284B8C;
+  }
+
+  .contact-box img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+  }
+  .faq {
+    flex: 2;
+    text-align: left;
+  }
+  
+  .faq h2 {
+    margin-bottom: 20px;
+  }
+  
+  .accordion {
+    background-color: #d9f4ff;
+    color: #1a3d6d;
+    cursor: pointer;
+    padding: 14px 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    height: 70px;
+  }
+  
+  .accordion:hover {
+    background-color: #c7ebff;
+  }
+  
+  .accordion:after {
+    content: '▼';
+    float: right;
+    transition: transform 0.3s;
+  }
+  
+  .accordion.active:after {
+    transform: rotate(180deg);
+  }
+  
+  .panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    border-radius: 0 0 10px 10px;
+    padding: 0 20px;
+  }
+  
+  .panel p {
+    padding: 15px;
+    margin: 0;
+    font-size: 20px;
+  }
+  

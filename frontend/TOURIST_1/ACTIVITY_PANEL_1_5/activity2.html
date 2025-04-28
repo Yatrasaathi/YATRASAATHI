@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACTIVITY 2</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #E6F4FF;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #d5ecff;
+            padding: 10px 100px;
+        }
+
+        /* Logo and Title */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 100px;
+            /* Adjust as per your logo */
+            height: 100px;
+        }
+
+        .brand-name {
+            font-size: 32px;
+            color: #284B8C;
+            font-weight: bold;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1a2b4c;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .nav-links .active {
+            border-bottom: 2px solid #1a2b4c;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .search-container input {
+            border: none;
+            padding: 10px;
+            outline: none;
+            width: 180px;
+            height: 45px;
+            font-size: 14px;
+        }
+
+        .search-container button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 15px;
+            cursor: pointer;
+        }
+
+
+
+        /* Active step indicator */
+        .actives {
+            background-color: #44D1C5;
+            color: #284B8C;
+        }
+
+        .tab-container {
+            display: flex;
+            justify-content: left;
+            margin: 20px;
+            margin-left: 100px;
+        }
+
+        .tab {
+            background: #D2E3F1;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 5px;
+        }
+
+        .tab.active {
+            background: #79BBDE;
+            margin-right: 5px;
+
+        }
+
+        .trip-list {
+            width: 80%;
+            margin-left: 100px;
+        }
+
+        .trip {
+            display: flex;
+            align-items: center;
+            background: #D2E3F1;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            height: 80px;
+        }
+
+        .trip img {
+            width: 80px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+
+        .trip-info {
+            flex-grow: 1;
+        }
+
+        .trip-info h3,
+        p {
+            color: #284B8C;
+            text-align: left;
+        }
+
+        .price-container {
+            width: 100%;
+            /* Ensures the container spans the full width of its parent */
+            height: 100px;
+            /* Set a specific height as needed */
+            display: flex;
+            justify-content: center;
+            /* Centers content horizontally */
+            align-items: center;
+            /* Centers content vertically */
+            text-align: center;
+            /* Ensures text alignment is centered */
+            color: #284B8C;
+        }
+
+
+        .schedule-btn {
+            background: #89CCFF;
+            color: #284B8C;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="YS LOGO.png" alt="Yatra Saathi Logo" class="logo">
+            <h1 class="brand-name">Yatra Saathi</h1>
+        </div>
+        <div class="nav-links">
+            <a href="http://localhost:7000/TOURIST_1/SEARCH_1_3/after_login.html">Home</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIVITY_PANEL_1_5/activity1.html" class="active">Activity Panel</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/profile.html">My Account</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/contact.html">Help</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Enter your destination">
+            <button id="searchBtn" onclick="searchPlaces()">Search</button>
+        </div>
+
+        <!-- Results Container -->
+        <div id="root"></div>
+    </nav>
+
+    <div class="tab-container">
+        <button class="tab" onclick="window.location.href='activity1.html'">Incoming</button>
+        <button class="tab active" onclick="window.location.href='activity2.html'">Completed</button>
+    </div>
+
+    <div class="trip-list">
+        <div class="trip">
+            <img src="ctc.png" alt="Cuttack">
+            <div class="trip-info">
+                <h3>Cuttack</h3>
+                <p>ended on 6th May ></p>
+            </div>
+            <div class="price-container">
+                ₹ 19,200
+            </div>
+            <button class="schedule-btn" onclick="window.location.href='cview_sch.html';">View Schedule</button>
+        </div>
+
+        <div class="trip">
+            <img src="puri.png" alt="Puri">
+            <div class="trip-info">
+                <h3>Puri</h3>
+                <p>ended on 9th May ></p>
+            </div>
+            <div class="price-container">
+                ₹ 21,150
+            </div>
+            <button class="schedule-btn" onclick="window.location.href='pview_sch.html';">View Schedule</button>
+
+        </div>
+        <div class="trip">
+            <img src="bbsr.png" alt="BBSR">
+            <div class="trip-info">
+                <h3>Bhubaneswar</h3>
+                <p>Ended on 13th May ></p>
+            </div>
+            <div class="price-container">
+                ₹ 24,290
+            </div>
+            <button class="schedule-btn" onclick="window.location.href='bview_sch.html';">View Schedule</button>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #E6F4FF;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d3ecff;
+  padding: 10px 100px;
+}
+
+/* Logo and Title */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.brand-name {
+  font-size: 32px;
+  color: #284B8C;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1a2b4c;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nav-links .active {
+  border-bottom: 2px solid #1a2b4c;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.search-container input {
+  border: none;
+  padding: 10px;
+  outline: none;
+  width: 180px;
+  height: 45px;
+  font-size: 14px;
+}
+
+.search-container button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 15px 15px;
+  cursor: pointer;
+}
+
+
+/* Container for the form */
+.form-container {
+  width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for form groups */
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+/* Styling for half-width inputs */
+.half-width {
+  width: 48%;
+}
+
+/* Label styling */
+label {
+  font-size: 18px;
+  font-weight: 550;
+  color: #284b8c;
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+/* Input and select field styling */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #dff7ff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Input container for time input with icon */
+.input-container {
+  position: relative;
+}
+
+/* Icon styling inside input */
+.input-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+/* Adjust padding when input has an icon */
+.input-container input {
+  padding-right: 35px;
+}
+
+
+/* Ensures "Arrival, From, and Start Date" sections have spacing */
+.row-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  /* Adds spacing between grouped elements */
+}
+
+
+.half-width {
+  width: 48%;
+}
+
+h3 {
+  color: #284b8c;
+  text-align: left;
+}
+
+.guides-section {
+  padding: 20px;
+  background-color: #f8f9fa;
+  text-align: left;
+  color: #284b8c;
+}
+
+.section-heading {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.guides-container {
+  display: flex;
+  overflow-x: scroll;
+  gap: 20px;
+  padding: 0 20px 10px 20px;
+  scroll-behavior: smooth;
+}
+
+.guide-card {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: left;
+}
+
+.guide-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.guide-info {
+  padding: 15px;
+}
+
+.guide-name {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.guide-location {
+  margin: 5px 0;
+}
+
+.guide-rating {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 0px;
+  /* Ensure no extra space above the rating */
+}
+
+
+.stars {
+  color: #D3D3D3;
+  /* Gray for empty stars */
+  font-size: 20px;
+}
+
+.star {
+  display: inline-block;
+  font-size: 20px;
+  color: hsl(0, 0%, 39%);
+  /* Default gray for all stars */
+}
+
+.star.filled {
+  color: #284B8C;
+  /* Blue for filled stars */
+}
+
+.rating-value {
+  color: #284B8C;
+  margin-left: 5px;
+}
+
+.guide-extra {
+  margin-top: 10px;
+  font-size: 0.95em;
+}
+
+.guide-extra strong {
+  display: inline-block;
+  width: 100px;
+}
+
+.guide-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.charges {
+  font-weight: bold;
+}
+
+.add-btn {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Scrollbar styling */
+.guides-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.guides-container::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 5px;
+}
+
+.guides-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.guides-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.note {
+  font-size: 12px;
+  color: #284B8C;
+  text-align: center;
+  margin-top: 5px;
+  padding-bottom: 5px;
+}
+
+.add-trip-btn {
+  background-color: #14a7a4;
+  /* Button background color */
+  color: white;
+  /* Text color */
+  padding: 15px 40px;
+  /* Increased padding for larger size */
+  font-size: 18px;
+  /* Optional: Increase font size for better readability */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  border-radius: 20px;
+  /* Maintains oval shape */
+  cursor: pointer;
+  outline: none;
+}

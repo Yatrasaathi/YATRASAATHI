@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #E6F4FF;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d5ecff;
+    padding: 10px 100px;
+}
+
+/* Logo and Title */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    /* Adjust as per your logo */
+    height: 100px;
+}
+
+.brand-name {
+    font-size: 32px;
+    color: #284B8C;
+    font-weight: bold;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #284B8C;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav-links .active {
+    border-bottom: 2px solid #284B8C;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.search-container input {
+    border: none;
+    padding: 10px;
+    outline: none;
+    width: 180px;
+    height: 45px;
+    font-size: 14px;
+}
+
+.search-container button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    cursor: pointer;
+}
+
+.feedback-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: left;
+    background-color: #F7FCFF;
+}
+
+.title {
+    font-size: 26px;
+    color: #284B8C;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #284B8C;
+    margin-bottom: 30px;
+}
+
+.feedback-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.feedback-img img {
+    width: 250px;
+}
+
+.feedback-form {
+    flex: 1;
+    padding: 30px;
+    text-align: left;
+    height: 500px;
+    background-color: #E6F4FF;
+
+}
+
+.feedback-form p {
+    margin: 10px 0;
+    color: #284B8C;
+}
+
+.rating-options label {
+    display: inline-block;
+    /* Ensures each label behaves like a block for spacing */
+    margin-right: 15px;
+    /* Adds space to the right of each label */
+}
+
+.guide-rating {
+    font-size: 24px;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .star {
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .star.filled {
+    color: #007BFF; /* Blue */
+  }
+  
+  .rating-value {
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+
+textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+
+.upload-btn {
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #2aa1c0;
+    border-radius: 8px;
+    color: #2aa1c0;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    margin: 10px auto;
+    width: 250px;
+  }
+
+  .upload-btn:hover {
+    background-color: #2aa1c0;
+    color: white;
+  }
+
+  .file-names {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+  /* Terms & checkbox */
+  .terms {
+    font-size: 15px;
+    margin-top: 10px;
+    color: #284B8C;
+    text-align: center;
+  }
+  
+  .terms input {
+    margin-right: 8px;
+  }
+  
+  .terms a {
+    text-decoration: none;
+  }
+  
+  .terms a:hover {
+    text-decoration: underline;
+  }
+  
+.submit-btn {
+    margin-top: 20px;
+    width: 30%;
+    padding: 12px;
+    background-color: #00b8e6;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit-btn:hover {
+    background-color: #0099cc;
+}

@@ -1,0 +1,481 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    background: #FFFFFF;
+    color: #284B8C;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #D3ECFF;
+    padding: 10px 100px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 132px;
+    background: #D3ECFF;
+}
+
+/* Logo and Title */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    /* Adjust as per your logo */
+    height: 100px;
+}
+
+.brand-name {
+    font-size: 32px;
+    color: #284B8C;
+    font-weight: bold;
+}
+h1 {
+    font-size: 20px;
+    color: #183A70;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    border: none;
+    padding: 12px 41px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.login {
+    background: #CCF8FC;
+    color: #183A70;
+}
+
+.signup {
+    background: #3498DB;
+    color: #183A70;
+}
+
+
+.search-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background: #F0F8FF;
+}
+
+.text-content {
+    max-width: 50%;
+}
+
+.text-content p {
+    color: #456490;
+    font-size: 16px;
+
+}
+
+h2 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.guide-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.guide-section .text-content {
+    flex: 1;
+    text-align: left;
+    margin-left: 200px;
+}
+
+.highlight {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 25px;
+    height: 35px;
+    width: 400px;
+    background-color: #44D1C5;
+}
+
+.guide-section .text-content p {
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+.guide-section .image-content {
+    flex: 1;
+}
+
+.guide-section .image-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.fcontainer {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .fcontainer img {
+    width: 1630px;
+    height: auto;
+    border-radius: 8px;
+  }
+/* Guides Section */
+.guides-section {
+    text-align: center;
+    padding: 40px;
+}
+
+/* Heading */
+.section-heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    color: #153B76;
+    margin-bottom: 20px;
+}
+
+/* Guides Container */
+.guides-container {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Prevents wrapping */
+    justify-content: space-evenly;
+    /* Adjust spacing evenly */
+    gap: 5px;
+    /* Reduce space between guide cards */
+    overflow-x: auto;
+    /* Enables horizontal scrolling if needed */
+    padding: 10px;
+    width: 1600px;
+    /* Ensures full width usage */
+    white-space: nowrap;
+    /* Prevents line breaks */
+}
+
+/* Guide Card */
+.guide-card {
+    background: #B2F1FF;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 262px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    flex: 0 0 auto;
+}
+
+/* Guide Image */
+.guide-card img {
+    width: 262px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Guide Info */
+.guide-info {
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 5px;
+    /* Reduced top padding */
+}
+
+/* Guide Name */
+.guide-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #284B8C;
+    margin-top: 5px;
+    /* Reduced top margin */
+    margin-bottom: 2px;
+    /* Reduced space below the guide's name */
+}
+
+/* Guide Location */
+.guide-location {
+    font-size: 16px;
+    color: #284B8C;
+    font-weight: 400;
+    margin-bottom: 2px;
+    /* Reduced margin to minimize space between location and rating */
+}
+
+/* Rating */
+.guide-rating {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0px;
+    /* Ensure no extra space above the rating */
+}
+
+
+.stars {
+    color: #D3D3D3;
+    /* Gray for empty stars */
+    font-size: 20px;
+}
+
+.star {
+    display: inline-block;
+    font-size: 20px;
+    color: hsl(0, 0%, 39%);
+    /* Default gray for all stars */
+}
+
+.star.filled {
+    color: #284B8C;
+    /* Blue for filled stars */
+}
+
+.rating-value {
+    color: #284B8C;
+    margin-left: 5px;
+}
+
+.faq-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 55px;
+    margin-left: 20px;
+}
+
+.faq-left {
+    width: 40%;
+    text-align: left;
+}
+
+.faq-left h2 {
+    color: #183A70;
+    font-size: 28px;
+    text-align: left;
+}
+
+.faq-left p {
+    color: #456490;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.faq-left img {
+    max-width: 80%;
+    margin: 0px 140px;
+    height: auto;
+}
+
+.faq-right {
+    width: 50%;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #E2F5FF;
+    color: #284B8C;
+    font-size: 20px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.faq-answer {
+    display: none;
+    color: #284B8C;
+    padding: 15px;
+    background: #ffffff;
+    font-size: 20px;
+}
+
+/* Footer Styling */
+footer {
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Section: Logo & Social Media */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+/* Logo on Left */
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.footer-logo span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #284B8C;
+}
+
+/* Social Media on Right */
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-social span {
+    font-size: 14px;
+    color: #284B8C;
+    margin-right: 8px;
+}
+
+.footer-social img {
+    width: 28px;
+    height: 28px;
+    background: rgba(0, 128, 255, 0.2);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* Horizontal Lines */
+.footer-line {
+    border: none;
+    border-top: 2px solid #999999;
+    margin: 10px 0;
+}
+
+/* Footer Links Section */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+/* Remove bold and color from "About," "For Tourist," etc. */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-left: 100px;
+}
+
+.footer-column h3,
+.footer-column span {
+    font-weight: bold;
+    display: block;
+    color: #284B8C;
+}
+
+.footer-column a {
+    display: block;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: #284B8C;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* Bottom Section: Copyright */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #284B8C;
+}
+
+.footer-bottom a {
+    color: #284B8C;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Country (Right Side) */
+.footer-country {
+    font-size: 13px;
+    font-weight: bold;
+    color: #284B8C;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin: 20px 0;
+    }
+
+    .footer-social {
+        margin-top: 10px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

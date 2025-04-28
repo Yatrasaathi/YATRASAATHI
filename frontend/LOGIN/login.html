@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form id="login-form">
+        <div class="login-wrapper">
+            <div class="login-box">
+                <!-- Left Side: Login Form -->
+                <div class="login-form">
+                    <h2>Login</h2>
+                    <div class="log">
+                        <!-- Dropdown to select user type -->
+                        <div class="user-type-container">
+                            <label for="role">Login As:</label>
+                            <select id="role" name="role">
+                                <option value="tourist">Tourist</option>
+                                <option value="guide">Guide</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter Email Address" required>
+
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter Password" required>
+
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+
+                        <button class="login-btn">Login</button>
+
+                        <!-- Signup Redirect -->
+                        <p class="account-text">Don't have an account? <a
+                                href="../TOURIST_1/SIGNUP_1_2/tsignup.html">Sign up</a></p>
+                    </div>
+                    
+                    <div class="divider">Or Login using</div>
+                    <div class="social-login">
+                        <a href="#"><img src="Google icon.png" alt="Google"></a>
+                        <a href="#"><img src="Facebook icon.png" alt="Facebook"></a>
+                        <a href="#"><img src="Insta icon.png" alt="Instagram"></a>
+                        <a href="#"><img src="Twit icon.png" alt="Twitter"></a>
+                    </div>
+                    <!-- </form> -->
+                </div>
+
+                <!-- Right Side: Image -->
+                <div class="login-image">
+                    <img src="Group 1171276148.png" alt="Tourist Image">
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>

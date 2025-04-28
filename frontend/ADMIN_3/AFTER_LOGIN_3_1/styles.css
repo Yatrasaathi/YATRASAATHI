@@ -1,0 +1,136 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    background: #F1F9FF;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #D3ECFF;
+    padding: 10px 100px;
+  }
+  
+  
+  /* Logo and Title */
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .brand-name {
+    font-size: 32px;
+    color: #284B8C;
+    font-weight: bold;
+  }
+.hero {
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 40px;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+}
+.blog-section {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  }
+  
+  .blog-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 450px;
+    height: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: #284B8C;
+  }
+  
+  .blog-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .blog-card a {
+    text-decoration: none;
+    color: inherit;
+    padding: 15px;
+    flex-grow: 1;
+  }
+  
+  .blog-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+  }
+  
+  .blog-card p {
+    margin: 0;
+    font-size: 0.95em;
+    line-height: 1.4;
+  }
+  
+  .blog-meta {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-top: 1px solid #eee;
+    background-color: #f9f9f9;
+  }
+  
+  .author-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .author-name {
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+  
+  .date-time {
+    font-size: 0.8em;
+  }
+  

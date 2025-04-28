@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gift</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #E6F4FF;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #d5ecff;
+            padding: 10px 100px;
+        }
+
+        /* Logo and Title */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 100px;
+            /* Adjust as per your logo */
+            height: 100px;
+        }
+
+        .brand-name {
+            font-size: 32px;
+            color: #284B8C;
+            font-weight: bold;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #284B8C;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .nav-links .active {
+            border-bottom: 2px solid #284B8C;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .search-container input {
+            border: none;
+            padding: 10px;
+            outline: none;
+            width: 180px;
+            height: 45px;
+            font-size: 14px;
+        }
+
+        .search-container button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 15px;
+            cursor: pointer;
+        }
+
+        .thank-you-card {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fdfdfd;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .thank-you-card h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #284B8C;
+        }
+
+        .thank-you-card p {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            color: #284B8C;
+        }
+
+        .gift-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="YS LOGO.png" alt="Yatra Saathi Logo" class="logo">
+            <h1 class="brand-name">Yatra Saathi</h1>
+        </div>
+        <div class="nav-links">
+            <a href="http://localhost:7000/TOURIST_1/SEARCH_1_3/after_login.html">Home</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIVITY_PANEL_1_5/activity1.html">Activity Panel</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/profile.html">My Account</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/contact.html">Help</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Enter your destination">
+            <button id="searchBtn" onclick="searchPlaces()">Search</button>
+        </div>
+
+        <!-- Results Container -->
+        <div id="root"></div>
+    </nav>
+    <div>
+    </div>
+    <div class="thank-you-card">
+        <h1>🎉 Thank you for your feedback!</h1>
+        <p>Here's a surprise just for you 🎁</p>
+        <div class="gift-img">
+            <img src="https://media.istockphoto.com/id/1134241228/photo/group-picture-next-to-keralan-tea-plantations.webp?a=1&b=1&s=612x612&w=0&k=20&c=roTWqMtsRpSYh197TWEyN_S5UOV1aiakm4YUb_AkWI0="
+                alt="Tourist Photo">
+        </div>
+    </div>
+
+</body>
+
+</html>

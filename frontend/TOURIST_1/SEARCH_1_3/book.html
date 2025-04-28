@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Booking - Yatra Saathi</title>
+    <link rel="stylesheet" href="bookstyle.css">
+    
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo"><img src="YS LOGO.png"></div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Activity Panel</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/profile.html">My Account</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/contact.html">Help</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Enter your destination">
+            <button id="searchBtn" onclick="searchPlaces()">Search</button>
+        </div>
+
+        <!-- Results Container -->
+        <div id="root"></div>
+    </nav>
+    <!-- Form -->
+    <div class="form-container">
+        <h2 style="color: #2848bc; padding-bottom: 15px;">Trip Details</h2>
+        <form id="tripForm" action="http://localhost:7000/api/TripDetails" method="post">
+            <!-- From & To in Single Line -->
+            <div class="form-group">
+                <div class="half-width">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="Enter city name">
+                </div>
+
+                <div class="half-width">
+                    <label>Select Members</label>
+                    <input type="number" id="members" name="members" min="1" max="15">
+                </div>
+            </div>
+
+            <!-- Arrival & Departure in Single Line -->
+            <div class="form-group">
+                <div class="half-width">
+                    <label for="tripdate">Trip date</label>
+                    <input type="date" id="tripdate" class="tripdate" placeholder="Select Arrival Date">
+                  </div>
+                  <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                      const today = new Date();
+                      const year = today.getFullYear();
+                      const month = String(today.getMonth() + 1).padStart(2, '0');
+                      const day = String(today.getDate()).padStart(2, '0');
+                      const minDate = `${year}-${month}-${day}`;
+                      document.getElementById('tripdate').setAttribute('min', minDate);
+                    });
+                  </script>
+                                    
+                <div class="half-width">
+                    <label>Selected Guide</label>
+                    <input type="text" id="selectedguide" class="selectedguide" name="guide"  placeholder="Enter Guide" readonly />
+                    <input type="hidden" id="guideCharges" name="guideCharges">
+
+                </div>
+            </div>
+
+            <!-- Start Time & Duration in Single Line -->
+            <div class="form-group">
+                <!-- Start Time Input -->
+                <div class="half-width">
+                    <label for="starttime">Start Time:</label>
+                    <select id="starttime" class="starttime" name="starttime" required>
+                        <option value="" disabled selected>Select Time</option>
+                        <option value="07:00">7:00 AM</option>
+                        <option value="08:00">8:00 AM</option>
+                        <option value="09:00">9:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                    </select>
+                </div>
+                <!-- Duration Dropdown -->
+                <div class="half-width">
+                    <label for="duration">Duration</label>
+                    <input type="text" id="duration" class="duration" name="duration" placeholder="Enter duration"
+                        readonly>
+                </div>
+            </div>
+
+            <!-- Guides Section -->
+            <section class="guides-section">
+                <h2 class="section-heading">Guides Nearby</h2>
+                <div class="guides-container" style="height: 490px;">
+                    <!-- Guide 1 -->
+                    <div class="guide-card">
+                        <img src="https://plus.unsplash.com/premium_photo-1661964253167-abf4772f72cf?w=600&auto=format&fit=crop&q=60"
+                            alt="Guide 1">
+                        <div class="guide-info">
+                            <h3 class="guide-name">Rita Sahoo</h3>
+                    <p class="guide-location">Cuttack,Odisha</p>
+                            <div class="guide-rating" data-rating="4">
+                                <span class="stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star">☆</span>
+                                </span>
+                                <span class="rating-value">4.3</span>
+                            </div>
+                            <div class="guide-extra">
+                                <p><strong>Languages:</strong> English,Odia, Hindi</p>
+                            </div>
+                            <div class="guide-actions">
+                                <span class="charges">₹2000/day</span>
+                                <button class="add-btn" onclick="selectGuide(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Guide 2 -->
+                    <div class="guide-card">
+                        <img src="https://plus.unsplash.com/premium_photo-1722682238873-648b1264ca06?w=600&auto=format&fit=crop&q=60"
+                            alt="Guide 2">
+                        <div class="guide-info">
+                            <h3 class="guide-name">Raghu Das</h3>
+                    <p class="guide-location">Bhubaneswar,Odisha</p>
+                            <div class="guide-rating" data-rating="4">
+                                <span class="stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star">☆</span>
+                                </span>
+                                <span class="rating-value">4.5</span>
+                            </div>
+                            <div class="guide-extra">
+                                <p><strong>Languages:</strong> Odia, Bengali, English</p>
+                            </div>
+                            <div class="guide-actions">
+                                <span class="charges">₹1800/day</span>
+                                <button class="add-btn" onclick="selectGuide(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Guide 3 -->
+                    <div class="guide-card">
+                        <img src="https://plus.unsplash.com/premium_photo-1718146019127-ebfb31a4af15?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Guide 3">
+                        <div class="guide-info">
+                            <h3 class="fullName">Manoranjan Majhi</h3>
+                    <p class="guide-location">Puri,Odisha</p>
+                            <div class="guide-rating" data-rating="2">
+                                <span class="stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star">☆</span>
+                                </span>
+                                <span class="rating-value">4.0</span>
+                            </div>
+                            <div class="guide-extra">
+                                <p><strong>Languages:</strong> English, Hindi</p>
+                            </div>
+                            <div class="guide-actions">
+                                <span class="charges">₹1200/day</span>
+                                <button class="add-btn" onclick="selectGuide(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Guide 4 -->
+                    <div class="guide-card">
+                        <img src="https://images.unsplash.com/photo-1570369336897-57984b6cf5dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fG1lbiUyMHBlcnNvbiUyMHRyYXZlbCUyMGd1aWRlfGVufDB8fDB8fHww"
+                            alt="Guide 4">
+                        <div class="guide-info">
+                            <h3 class="guide-name">Aarav Pradhan</h3>
+                    <p class="guide-location">Cuttack,Odisha</p>
+                            <div class="guide-rating" data-rating="2">
+                                <span class="stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star">☆</span>
+                                </span>
+                                <span class="rating-value">4.2</span>
+                            </div>
+                            <div class="guide-extra">
+                                <p><strong>Languages:</strong> English,Bengali,Odia, Hindi</p>
+                            </div>
+                            <div class="guide-actions">
+                                <span class="charges">₹2000/day</span>
+                                <button class="add-btn" onclick="selectGuide(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Guide 5 -->
+                    <div class="guide-card">
+                        <img src="https://images.unsplash.com/flagged/photo-1577605047476-202951cec757?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGluZGlhbiUyMHBlcnNvbiUyMHRyYXZlbCUyMGd1aWRlfGVufDB8fDB8fHww"
+                            alt="Guide 5">
+                        <div class="guide-info">
+                            <h3 class="guide-name">Sarat Manik </h3>
+                    <p class="guide-location">Bhubaneswar,Odisha</p>
+                            <div class="guide-rating" data-rating="4">
+                                <span class="stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star">☆</span>
+                                </span>
+                                <span class="rating-value">4.5</span>
+                            </div>
+                            <div class="guide-extra">
+                                <p><strong>Languages:</strong> Odia,Urdu Hindi</p>
+                            </div>
+                            <div class="guide-actions">
+                                <span class="charges">₹1000/day</span>
+                                <button class="add-btn" onclick="selectGuide(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Guide 6 -->
+                    <div class="guide-card">
+                        <img src="https://plus.unsplash.com/premium_photo-1726880533961-5750af8c5d64?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Z3VpZGUlMjB0cmF2ZWwlMjBpbmRpYSUyMHdvbWVufGVufDB8fDB8fHww" alt="Guide 6">
+                <div class="guide-info">
+                    <h3 class="name">Radhika Senapati</h3>
+                    <p class="guide-location">Puri,Odisha</p>
+                            <div class="guide-rating" data-rating="4">
+                                <span class="stars">
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star filled">★</span>
+                                    <span class="star">☆</span>
+                                </span>
+                                <span class="rating-value">4.3</span>
+                            </div>
+                            <div class="guide-extra">
+                                <p><strong>Languages:</strong> English, Tamil, Hindi</p>
+                            </div>
+                            <div class="guide-actions">
+                                <span class="charges">₹1100/day</span>
+                                <button class="add-btn" onclick="selectGuide(this)">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <p class="note">Note : Cancellation valid within 24 hours of the booking. Know more about <a
+                    href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/tcancel.html">Cancellation Policy.</a></p>
+            <button type="button" class="add-trip-btn" onclick="submitTrip()">Add to
+                Trip</button>
+        </form>
+    </div>
+    <script src="book.js"></script>
+</body>
+
+</html>

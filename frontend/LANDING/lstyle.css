@@ -1,0 +1,878 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    background: #E6F4FF;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 132px;
+    background: #D3ECFF;
+}
+
+/* Logo and Title */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px; /* Adjust as per your logo */
+    height: 100px;
+}
+
+.brand-name {
+    font-size: 32px;
+    color: #284B8C;
+    font-weight: bold;
+}
+
+/* Toggle Container */
+.toggle-container {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-text {
+    font-size: 20px;
+    color: #7994CF;
+    margin-right: 10px;
+}
+
+/* Toggle Button */
+.toggle-switch {
+    display: flex;
+    background: #C4F1FF;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0px 10px 40px #5F5E58 25%;
+}
+
+.toggle-btn {
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s;
+    width: 280px;
+    height: 50px;
+}
+
+.guide {
+    background: #CCF8FC;
+    color: #284BBC;
+    height: 50px;
+    width: 160px;
+    border-radius: 30px;
+}
+
+.tourist {
+    background: #3BA4D5;
+    color: #284BBC;
+    height: 50px;
+    width: 160px;
+    border: #7994CF;
+    border-radius: 30px;
+}
+
+/* Active Button Effect */
+/* .toggle-btn.active {
+    background: #80b7dc;
+    color: white;
+} */
+.explore-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+    background: #E3F2FF;
+}
+
+/* Left Side */
+.explore-left {
+    width: 30%;
+    align-items: right;
+    margin-left: 130px;
+}
+
+.explore-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #284BBC;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #F7FCFF;
+    border-radius: 30px;
+    padding: 5px 0px 5px 50px;
+    width: 478px;
+    height: 62px;
+    align-content: right;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 30px 0px 0px 30px;
+    color: #555;
+    width: 354px;
+    height: 42px;
+    font-weight: lighter;
+}
+
+.search-btn {
+    background: #3BA4D5;
+    color: #F7FCFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0px 30px 30px 0px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 124px;
+    height: 72px;
+}
+
+.search-btn:hover {
+    background: #155A8A;
+}
+
+/* Right Side */
+.explore-right {
+    width: 70%;
+    height: 322px;
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    /* padding: 93px 178px; */
+}
+
+.explore-img {
+    width: 784px;
+    height: 365px;
+}
+
+.travel-destinations {
+    padding: 40px 60px;
+}
+
+/* Header: Title + View All */
+.destination-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.destination-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #153B76;
+}
+
+.view-all {
+    text-decoration: none;
+    color: #1D78B0;
+    font-size: 16px;
+}
+
+/* Destination Container */
+.destination-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Destination Card */
+.destination-card {
+    position: relative;
+    width: 19%;
+    border-radius: 10px;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Info Overlay */
+.destination-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+}
+
+/* Destination Name */
+.destination-name {
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+}
+
+/* Explore Button */
+.explore-btn {
+    background: #1DD3B0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: black;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.explore-btn:hover {
+    background: #17A589;
+}
+/* Section Styling */
+.features-section {
+    padding: 40px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #153B76;
+    margin-bottom: 20px;
+}
+.feature-image-box {
+    display: flex;
+    width: 100%; /* Ensures it takes full container width */
+    padding: 0; /* Removes extra space */
+    margin: 0; /* Removes extra space */
+}
+
+.feature-image-box img {
+    height: 400px; /* Keeps natural width */
+    width: 1600px; /* Maintains aspect ratio */
+    display: block;
+}
+
+/* Section Styling */
+.tour-section {
+    width: 2000px; /* Match the main content width */
+    text-align: left;
+    display: block;
+}
+.tour-section h2{
+    text-align: left;
+    margin-left: 60px;
+}
+.tour-image-box {
+    display: flex;
+    justify-content: left; /* Centers the image inside the box */
+    
+}
+
+.tour-image-box img {
+    width: 1600px;
+    margin-left: 50px;
+    height: auto;
+    display: block;
+}
+
+.tour-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #153B76;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+
+/* Travel Reports Section */
+.travel-reports {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Heading */
+.travel-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #153B76;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Reports Container */
+.reports-container {
+    display: flex;
+    justify-content: space-around; /* Even spacing */
+    align-items: center;
+    width: 1590px; /* Max width */
+    background: #C0FEFC;
+    padding: 20px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+/* Individual Report Items */
+.report-item {
+    display: flex;
+    flex-direction: column; /* Stack icon, number, text vertically */
+    align-items: center; 
+    text-align: center;
+    gap: 5px; /* Minimal spacing */
+    flex: 1;
+    min-width: 180px;
+}
+
+/* Circle Icon */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background: rgba(173, 232, 244, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Icon inside Circle */
+.icon-circle img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Report Text (Numbers + Description) */
+.report-number {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 2px; /* Small gap between number & text */
+}
+
+.report-details {
+    font-size: 16px;
+    color: black;
+    margin-top: 0px; /* Removes extra space */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .reports-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .report-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .reports-container {
+        flex-direction: column;
+    }
+
+    .report-item {
+        width: 100%;
+    }
+}
+/* Guides Section */
+.guides-section {
+    text-align: center;
+    padding: 40px;
+    background: #EAF4FC;
+}
+
+/* Heading */
+.section-heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    color: #153B76;
+    margin-bottom: 20px;
+}
+
+/* Guides Container */
+.guides-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    justify-content: space-evenly; /* Adjust spacing evenly */
+    gap: 5px; /* Reduce space between guide cards */
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    padding: 10px;
+    width: 1600px; /* Ensures full width usage */
+    white-space: nowrap; /* Prevents line breaks */
+}
+/* Guide Card */
+.guide-card {
+    background: #B2F1FF;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 262px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    flex: 0 0 auto;
+}
+
+/* Guide Image */
+.guide-card img {
+    width: 262px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Guide Info */
+.guide-info {
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 5px; /* Reduced top padding */
+}
+
+/* Guide Name */
+.guide-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #284B8C;
+    margin-top: 5px;  /* Reduced top margin */
+    margin-bottom: 2px; /* Reduced space below the guide's name */
+}
+
+/* Guide Location */
+.guide-location {
+    font-size: 16px;
+    color: #284B8C;
+    font-weight: 400;
+    margin-bottom: 2px; /* Reduced margin to minimize space between location and rating */
+}
+
+/* Rating */
+.guide-rating {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0px; /* Ensure no extra space above the rating */
+}
+
+
+.stars {
+    color: #D3D3D3; /* Gray for empty stars */
+    font-size: 20px;
+}
+
+.star {
+    display: inline-block;
+    font-size: 20px;
+    color: hsl(0, 0%, 39%); /* Default gray for all stars */
+}
+
+.star.filled {
+    color: #284B8C; /* Blue for filled stars */
+}
+
+.rating-value {
+    color: #284B8C;
+    margin-left: 5px;
+}
+
+/* Why Choose Us Section */
+.choose-us {
+    text-align: center;
+    padding: 40px;
+    background: #EAF4FC;
+}
+.choose-us h2{
+    margin-left: 10px;
+}
+
+/* Section Heading */
+.section-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #02286F;
+    margin-bottom: 20px;
+}
+
+/* Container: Full Width & Proper Alignment */
+.choose-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0094BE;
+    padding: 40px;
+    border-radius: 10px;
+    color: #e6f4ff;
+    width: 1590px;
+    margin: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Left Side Text */
+.choose-text {
+    width: 65%;  /* Increased width so text covers more space */
+    text-align: left;
+    line-height: 1.8;  /* More spacing for readability */
+    font-size: 22px;  /* Increased font size */
+    font-weight: 600;  /* Make text bolder */
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .choose-container {
+        flex-direction: column;  /* Stack elements for small screens */
+        text-align: center;
+    }
+
+    .choose-text {
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+    }
+}
+
+
+/* Button */
+.read-btn {
+    background: #A0CFF3;
+    color: black;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.read-btn:hover {
+    background: #A0C3E5;
+}
+
+/* Right Side Image */
+.choose-image {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.choose-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .choose-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .choose-text, .choose-image {
+        width: 100%;
+    }
+
+    .choose-text {
+        text-align: center;
+    }
+}
+/* Reviews Section */
+.reviews {
+    text-align: left;
+    padding: 30px;
+    margin: 0 30px;
+    width: 1660px;
+    box-sizing: border-box;
+}
+
+/* Header with "View all" */
+.reviews-header {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1600px;
+}
+
+.reviews-header h2 {
+    font-size: 22px;
+    color: #153B76;
+    margin-left: 20px;
+}
+
+.view-all {
+    font-size: 16px;
+    color: #007BFF;
+    text-decoration: none;
+    text-align: right;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+/* Reviews Container */
+.reviews-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    width: 99%;
+    margin: 0 auto;
+    gap: 15px;
+    flex-wrap: nowrap;
+}
+
+/* Individual Review Box */
+.review-box {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0px 1px 3px;
+    height: 200px;
+    width: 220px;
+    background-color: #F7F7F7;
+    /* Keeps the same width */
+}
+
+/* Rating */
+.rating {
+    font-size: 14px;
+    font-weight: bold;
+    color: #153B76;
+    margin-bottom: 8px;
+}
+
+/* Review Text */
+.review-text {
+    font-size: 13px;
+    color: #284B8C;
+    background: #eff1f3;
+    padding: 9px 15px;
+    text-align: left;
+    border-radius: 28px 20px 28px 3px;
+    margin-bottom: 8px;
+    width: 250px;
+}
+
+/* Reviewer (Profile Image + Name + Date) */
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  color: #284B8C;
+}
+
+.reviewer img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reviewer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.guide-name {
+  font-size: 14px;
+  color: #284B8C;
+}
+
+.review-date {
+  font-size: 12px;
+  color: #284B8C;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .reviews-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .review-box {
+        width: 48%;
+        min-width: unset;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .review-box {
+        width: 100%;
+    }
+}
+/* Footer Styling */
+footer {
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+}
+
+/* Top Section: Logo & Social Media */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+/* Logo on Left */
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.footer-logo span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #284B8C;
+}
+
+/* Social Media on Right */
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-social span {
+    font-size: 14px;
+    color: #284B8C;
+    margin-right: 8px;
+}
+
+.footer-social img {
+    width: 28px;
+    height: 28px;
+    background: rgba(0, 128, 255, 0.2);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* Horizontal Lines */
+.footer-line {
+    border: none;
+    border-top: 2px solid #999999;
+    margin: 10px 0;
+}
+
+/* Footer Links Section */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+/* Remove bold and color from "About," "For Tourist," etc. */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-left: 100px;
+}
+
+.footer-column h3,
+.footer-column span {
+    font-weight: bold;
+    display: block;
+    color: #284B8C;
+}
+
+.footer-column a {
+    display: block;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: #284B8C;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* Bottom Section: Copyright */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #284B8C;
+}
+
+.footer-bottom a {
+    color: #284B8C;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Country (Right Side) */
+.footer-country {
+    font-size: 13px;
+    font-weight: bold;
+    color: #284B8C;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin: 20px 0;
+    }
+
+    .footer-social {
+        margin-top: 10px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

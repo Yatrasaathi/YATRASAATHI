@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Review & Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="YS LOGO.png" alt="Yatra Saathi Logo" class="logo">
+            <h1 class="brand-name">Yatra Saathi</h1>
+        </div>
+        <div class="nav-links">
+            <a href="http://localhost:7000/TOURIST_1/SEARCH_1_3/after_login.html">Home</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIVITY_PANEL_1_5/activity1.html">Activity Panel</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/profile.html">My Account</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/contact.html">Help</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Enter your destination">
+            <button id="searchBtn" onclick="searchPlaces()">Search</button>
+        </div>
+
+        <!-- Results Container -->
+        <div id="root"></div>
+    </nav>
+    <form id="feedbackForm" method="post" enctype="multipart/form-data">
+
+
+        <div class="feedback-section">
+            <h2 class="title">Review & Feedback</h2>
+            <p class="subtitle">You are just one step far from your gift. Hurry up submit your valuable feedback & claim
+                gift.</p>
+
+            <div class="feedback-container">
+                <div class="feedback-img">
+                    <img src="Rating.png" alt="Review Image">
+                </div>
+
+                <div class="feedback-form">
+                    <p>1. How would you rate your overall experience in our Yatra Saathi Website?</p>
+                    <div class="rating-options" style="color: #284b8c;">
+                        <label><input type="radio" name="rating" checked> Exellent</label>
+                        <label><input type="radio" name="rating"> Good</label>
+                        <label><input type="radio" name="rating"> Average</label>
+                        <label><input type="radio" name="rating"> Poor</label>
+                        <label><input type="radio" name="rating"> Very Poor</label>
+                    </div>
+
+                    <p>2. Tell us something about your experience in your tour with our local guide?</p>
+                    <textarea id="experienceField" placeholder="E.g: I really enjoyed a lot."></textarea>
+
+                    <p>3. Rate your guide</p>
+                    <div class="guide-rating">
+                        <span class="stars">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </span>
+                        <span class="rating-value">0</span>
+                    </div>
+
+
+
+                    <input type="file" id="photoUpload" name="photoUpload" accept="image/*" multiple
+                        style="display: none;">
+
+                    <!-- Button to trigger file input -->
+                    <button type="button" class="upload-btn"
+                        onclick="document.getElementById('photoUpload').click()">Add
+                        Photos</button>
+
+                    <!-- Where file names will be shown -->
+                    <div id="fileNames" class="file-names"></div>
+
+                    <div class="terms">
+                        <label class="terms-label">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            Accept <a href="http://localhost:7000/ADMIN_3/AFTER_LOGIN_3_1/privacy.html">Privacy Policy</a>
+                            <button type="submit" class="submit-btn">Submit</button>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <script>
+        document.getElementById("feedbackForm").addEventListener("submit", handleFeedbackSubmit);
+        const stars = document.querySelectorAll('.guide-rating .star');
+        const ratingValue = document.querySelector('.guide-rating .rating-value');
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const value = parseInt(star.getAttribute('data-value'));
+                ratingValue.textContent = value.toFixed(1); // Shows like 4.0
+
+                // Highlight stars
+                stars.forEach(s => {
+                    if (parseInt(s.getAttribute('data-value')) <= value) {
+                        s.classList.add('filled');
+                    } else {
+                        s.classList.remove('filled');
+                    }
+                });
+            });
+        });
+        // Handle file selection and display file names
+        const photoUpload = document.getElementById('photoUpload');
+        const fileNamesContainer = document.getElementById('fileNames');
+
+        photoUpload.addEventListener('change', () => {
+            const files = photoUpload.files;
+            if (files.length > 0) {
+                const names = Array.from(files).map(file => file.name);
+                fileNamesContainer.innerHTML = names.join('<br>'); // Display selected file names
+            } else {
+                fileNamesContainer.innerHTML = ""; // Clear file names if no file is selected
+            }
+        });
+
+        async function handleFeedbackSubmit(e) {
+            e.preventDefault(); // Prevent default form behavior
+
+            const experience = document.getElementById('experienceField').value.trim();
+            const rating = document.querySelector('input[name="rating"]:checked')?.parentElement?.textContent.trim();
+            const guideRating = parseFloat(document.querySelector('.rating-value').textContent);
+            const photoFiles = document.getElementById('photoUpload').files;
+
+            if (!experience) {
+                alert("Please provide your feedback about the experience.");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('rating', rating);
+            formData.append('experience', experience);
+            formData.append('guideRating', guideRating);
+
+            for (let i = 0; i < photoFiles.length; i++) {
+                formData.append('photoUpload', photoFiles[i]);
+            }
+
+            try {
+                const response = await fetch('http://localhost:7000/api/feedback/', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+                console.log(result);
+
+                if (response.ok) {
+                    alert("Thank you! Redirecting to your gift...");
+                    window.location.href = 'gift.html';
+                } else {
+                    alert(result.message || "Submission failed!");
+                }
+
+            } catch (error) {
+                console.error('Error submitting feedback:', error);
+                alert('Submission failed!');
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

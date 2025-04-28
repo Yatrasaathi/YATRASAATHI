@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Success</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: sans-serif;
+            background-color: #e6f2ff; /* Light blue background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ddf4ff; /* Light box background */
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            background-color: #ffffff; /* White background for contrast */
+        }
+
+        .image-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h2 {
+            color: #2a4365;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-circle">
+            <img src="Group 1171276161.png" alt="Success Image"> 
+        </div>
+        <h2>Congratulations!</h2>
+        <p>You have successfully registered.<br>Now let's go and explore with us →</p>
+    </div>
+    <script>
+        setTimeout(function() {
+            window.location.href = "../../LOGIN/login.html"; // Redirect to login page
+        }, 3000); // Redirect after 3 seconds
+    </script>
+</body>
+</html>

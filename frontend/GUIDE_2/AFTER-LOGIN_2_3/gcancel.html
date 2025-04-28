@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gcancel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #FFFFFF;
+            color: #284B8C;
+            text-align: left;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #d5ecff;
+            padding: 10px 100px;
+        }
+
+        /* Logo and Title */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 100px;
+            /* Adjust as per your logo */
+            height: 100px;
+        }
+
+        .brand-name {
+            font-size: 32px;
+            color: #284B8C;
+            font-weight: bold;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #284B8C;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .nav-links .active {
+            border-bottom: 2px solid #284B8C;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .search-container input {
+            border: none;
+            padding: 10px;
+            outline: none;
+            width: 180px;
+            height: 45px;
+            font-size: 14px;
+        }
+
+        .search-container button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 15px;
+            cursor: pointer;
+        }
+
+        .term {
+            width: 1600px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #284B8C;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .term h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #284B8C;
+        }
+
+        .term ul {
+            margin-left: 20px;
+            list-style-type: disc;
+            font-size: 18px;
+        }
+
+        .term li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="YS LOGO.png" alt="Yatra Saathi Logo" class="logo">
+            <h1 class="brand-name">Yatra Saathi</h1>
+        </div>
+        <div class="nav-links">
+            <a href="http://localhost:7000/TOURIST_1/SEARCH_1_3/after_login.html">Home</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIVITY_PANEL_1_5/activity1.html">Activity Panel</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/profile.html">My Account</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/contact.html">Help</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Enter your destination">
+            <button id="searchBtn" onclick="searchPlaces()">Search</button>
+        </div>
+
+        <!-- Results Container -->
+        <div id="root"></div>
+    </nav>
+    <div class="term">
+        <h3>Cancellation Policy for Guides</h3>
+        <ul>
+            <li>
+                When cancelling a confirmed booking, you won't receive any payment and your chance to receive future
+                bookings will be decreased so rethink before cancelling.
+            </li>
+            <li>
+                If tourist cancel booking within 24hr, then there will be no problem for guide and their availability
+                status and rate of getting chances to receive future bookings will not be hampered.
+            </li>
+            <li>
+                In case of same day booking means the starting time begins within 24hr of booking then the guide will
+                receive full amount.
+            </li>
+            <li>
+                In case of emergency occurs, the guide can switch his confirmed booking to another guide only if 6hr
+                before the arrival of tourist and must notify us.
+            </li>
+            <li>
+                All bookings must be confirmed within 6hr. If you reject within the specified time range the booking
+                request expires and no payment is made. This also counts when the tourist withdraws booking request
+                before you confirm it.
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

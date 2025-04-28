@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTC PACKAGE</title>
+    <link rel="stylesheet" href="cstyle.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="YS LOGO.png" alt="Yatra Saathi Logo" class="logo">
+            <h1 class="brand-name">Yatra Saathi</h1>
+        </div>
+        <div class="nav-links">
+            <a href="http://localhost:7000/TOURIST_1/SEARCH_1_3/after_login.html">Home</a>
+            <a href="#">Activity Panel</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/profile.html">My Account</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/contact.html">Help</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Enter your destination">
+            <button id="searchBtn" onclick="searchPlaces()">Search</button>
+        </div>
+
+        <!-- Results Container -->
+        <div id="root"></div>
+    </nav>
+    <div class="container">
+        <div class="package-container">
+            <div class="package-left">
+                <img src="ctc.png"
+                    alt="Cuttack Image" class="package-image">
+            </div>
+            <div class="package-right">
+                <h1 class="heading">Cuttack</h1>
+                <p class="description">
+                    Known as the "Millennium City" and "Silver City," Cuttack is one of Odisha's oldest cities, serving
+                    as its former capital. It is a prominent commercial center, celebrated for its unique silver
+                    filigree work. The city is situated between the Mahanadi and Kathajodi rivers, enhancing its scenic
+                    beauty.
+                </p>
+                <div class="package-info">
+                    <p><strong>Package price:</strong>₹2450 per person</p>
+                </div>
+                <a href="book.html?city=cuttack">
+                    <button class="book-button">Book Package</button>
+                </a>
+            </div>
+        </div>
+
+        <h2 class="packages">Package Details</h2>
+
+        <div class="destination-box">
+            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/cuttack-chandi-temple-cuttack-odisha-chandi-temple1-attr-hero?qlt=82&ts=1726663557866"
+                alt="Destination 1">
+            <div class="destination-details">
+                <div class="left-details">
+                    <h4>Cuttack Chandi Temple</h4>
+                    <p>The Cuttack Chandi Temple is an ancient temple dedicated to the Goddess Chandi, the presiding
+                        deity of Cuttack, Odisha. The temple is located nearby the banks of the Mahanadi River.</p>
+                </div>
+                <div class="right-details">
+                    <p class="time">Time to Explore: 20 mins</p>
+                    <p class="closed on">Closed on: Open on all days</p>
+                    <p class="entry fee">Entry Fee: No Entry Fee</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destination-box">
+            <img src="https://s7ap1.scene7.com/is/image/incredibleindia/odisha-state-maritime-museum-cuttack-odisha-3-attr-hero?qlt=82&ts=1726663545071"
+                alt="Destination 2">
+            <div class="destination-details">
+                <div class="left-details">
+                    <h4>Odisha State Maritime Museum</h4>
+                    <p>Located at the historic Jobra Workshop, the museum offers insights into Odisha's maritime history
+                        with ten galleries showcasing artifacts like ancient navigation systems and replicas of boats.
+                    </p>
+                </div>
+                <div class="right-details">
+                    <p class="time">Time to Explore: 90 mins</p>
+                    <p class="closed on">Closed on: Monday</p>
+                    <p class="entry fee">Entry Fee: ₹10 per person</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destination-box">
+            <img src="https://eastindiantraveller.com/wp-content/uploads/2020/08/as5.jpeg" alt="Destination 3">
+            <div class="destination-details">
+                <div class="left-details">
+                    <h4>Dhabaleswar Temple</h4>
+                    <p>Perched on an island in the Mahanadi River, this temple is dedicated to Lord Shiva. It's renowned
+                        for its serene ambiance and intricate stone carvings dating back to the 10th and 11th centuries.
+                    </p>
+                </div>
+                <div class="right-details">
+                    <p class="time">Time to Explore: 120 mins</p>
+                    <p class="closed on">Closed on: Open on all days</p>
+                    <p class="entry fee">Entry Fee: No Entry Fee</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="destination-box">
+            <img src="https://odishatour.in/wp-content/uploads/2024/10/Peacock-Valley-cuttack.jpg?v=1730134244.png"
+                alt="Destination 4">
+            <div class="destination-details">
+                <div class="left-details">
+                    <h4>Peacock Valley</h4>
+                    <p>Situated near Naraj Dam, this serene valley is home to numerous peacocks and offers a tranquil
+                        environment for nature lovers and photographers. It's an ideal spot for
+                        picnics and bird-watching.</p>
+                </div>
+                <div class="right-details">
+                    <p class="time">Time to Explore: 30 mins</p>
+                    <p class="closed on">Closed on: Open on all days</p>
+                    <p class="entry fee">Entry Fee: No Entry Fee</p>
+                </div>
+            </div>
+        </div>
+        <div class="tourist-moments">
+            <h2>Lovely Moments of Tourists</h2>
+            <div class="tourist-photos">
+                <img src="https://media.istockphoto.com/id/1134241228/photo/group-picture-next-to-keralan-tea-plantations.webp?a=1&b=1&s=612x612&w=0&k=20&c=roTWqMtsRpSYh197TWEyN_S5UOV1aiakm4YUb_AkWI0="
+                    alt="Tourist Photo">
+                <img src="https://plus.unsplash.com/premium_photo-1679619556628-dc9cb6d5e19f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dG91cmlzdHxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Tourist Photo">
+                <img src="https://plus.unsplash.com/premium_photo-1677288649820-a7bd079d102e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dG91cmlzdHxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Tourist Photo">
+                <img src="https://plus.unsplash.com/premium_photo-1661764174171-c29f85bd8a37?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG91cmlzdHxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Tourist Photo">
+                <img src="https://cdn.pixabay.com/photo/2014/05/04/13/27/photograph-337576_1280.jpg"
+                    alt="Tourist Photo">
+                <img src="https://cdn.pixabay.com/photo/2021/08/22/08/10/hoi-an-6564496_1280.jpg" alt="Tourist Photo">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+</body>
+
+</html>

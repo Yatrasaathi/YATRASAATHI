@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: #FFFFFF;
+            color: #284B8C;
+            text-align: left;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #d3ecff;
+            padding: 10px 100px;
+        }
+
+        /* Logo and Title */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 100px;
+            /* Adjust as per your logo */
+            height: 100px;
+        }
+
+        .brand-name {
+            font-size: 32px;
+            color: #284B8C;
+            font-weight: bold;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #284B8C;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .nav-links .active {
+            border-bottom: 2px solid #284B8C;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .search-container input {
+            border: none;
+            padding: 10px;
+            outline: none;
+            width: 180px;
+            height: 45px;
+            font-size: 14px;
+        }
+
+        .search-container button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 15px;
+            cursor: pointer;
+        }
+
+        .privacy {
+            width: 1600px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 8px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #284B8C;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .privacy h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #284B8C;
+        }
+
+        .privacy ul {
+            margin-left: 20px;
+            list-style-type: disc;
+            font-size: 18px;
+        }
+
+        .privacy li {
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="YS LOGO.png" alt="Yatra Saathi Logo" class="logo">
+            <h1 class="brand-name">Yatra Saathi</h1>
+        </div>
+        <div class="nav-links">
+            <a href="http://localhost:7000/TOURIST_1/SEARCH_1_3/after_login.html">Home</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIVITY_PANEL_1_5/activity1.html">Activity Panel</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/profile.html">My Account</a>
+            <a href="http://localhost:7000/TOURIST_1/ACTIONS_1_6/contact.html">Help</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Enter your destination">
+            <button id="searchBtn" onclick="searchPlaces()">Search</button>
+        </div>
+
+        <!-- Results Container -->
+        <div id="root"></div>
+    </nav>
+    <div class="privacy">
+        <h3>Privacy Policy</h3>
+        <p>We have created this Privacy Policy to outline how we collect, use, and protect your personal data when you use our website and services. Any new features or services added in the future will also be governed by this Privacy Policy. We comply with all applicable data protection regulations, including the General Data Protection Regulation (GDPR) and other relevant laws.</p>
+      
+        <h4>1. Scope</h4>
+        <p>Yatrasaathi ("we," "us," or "our") provides this Privacy Policy to inform users of www.Yatrasaathi.com (the "Site") and our mobile application (the "Application") about our data collection and processing practices. Personal data refers to any information that directly or indirectly identifies you. This could include your name, contact details, or other identifiers that, when combined, reveal your identity.</p>
+      
+        <h4>2. Data Collection and Use</h4>
+        <p>We may collect and process the following types of personal data:</p>
+        <ul>
+          <li>Contact information (e.g., name, email, phone number)</li>
+          <li>Booking details and travel preferences</li>
+          <li>Payment information (processed securely through third-party payment providers)</li>
+          <li>User-generated content (e.g., reviews, comments)</li>
+          <li>Technical data (e.g., IP address, browser type, cookies)</li>
+        </ul>
+        <p>We use this data to:</p>
+        <ul>
+          <li>Process bookings and provide travel-related services</li>
+          <li>Improve user experience and personalize content</li>
+          <li>Ensure website security and prevent fraud</li>
+          <li>Comply with legal obligations</li>
+        </ul>
+      
+        <h4>3. Data Sharing</h4>
+        <p>We do not sell your personal data. However, we may share it with:</p>
+        <ul>
+          <li>Service providers assisting with travel bookings, payments, and customer support</li>
+          <li>Authorities when required by law</li>
+          <li>Third parties for analytics and website improvement (with anonymized data where possible)</li>
+        </ul>
+      
+        <h4>4. Data Security</h4>
+        <p>We implement industry-standard security measures to protect your personal data from unauthorized access, loss, or misuse. While we take reasonable steps to secure your information, no online platform is completely risk-free.</p>
+      
+        <h4>5. Your Rights</h4>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Access, correct, or delete your personal data</li>
+          <li>Withdraw consent for data processing</li>
+          <li>Object to certain uses of your data</li>
+          <li>Request data portability</li>
+        </ul>
+        <p>To exercise these rights, contact us at [contact email].</p>
+      
+        <h4>6. Updates to This Policy</h4>
+        <p>We may update this Privacy Policy periodically. Any changes will be posted on this page with an updated revision date. For any questions, please contact us at [contact email].</p>
+      </div>
+      
+</body>
+
+</html>
